@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1></h1>
+    <div class="wrapper">
+        <input id="display" readonly>
+
+        <section class="calculator-buttons">
+            <!-- Row 1 -->
+            <div class="calculator-button-row">
+                <button class="calculator-button calculator-button-double" onclick="clearDisplay()">C</button>
+                <button class="calculator-button" onclick="deleteLastChar()">&larr;</button>
+                <button class="calculator-button" onclick="appendToDisplay('/')">&divide;</button>
+            </div>
+            <!-- Row 2 -->
+            <div class="calculator-button-row">
+                <button class="calculator-button" onclick="appendToDisplay('7')">7</button>
+                <button class="calculator-button" onclick="appendToDisplay('8')">8</button>
+                <button class="calculator-button" onclick="appendToDisplay('9')">9</button>
+                <button class="calculator-button" onclick="appendToDisplay('*')">&times;</button>
+            </div>
+            <!-- Row 3 -->
+            <div class="calculator-button-row">
+                <button class="calculator-button" onclick="appendToDisplay('4')">4</button>
+                <button class="calculator-button" onclick="appendToDisplay('5')">5</button>
+                <button class="calculator-button" onclick="appendToDisplay('6')">6</button>
+                <button class="calculator-button" onclick="appendToDisplay('-')">&minus;</button>
+            </div>
+            <!-- Row 4 -->
+            <div class="calculator-button-row">
+                <button class="calculator-button" onclick="appendToDisplay('1')">1</button>
+                <button class="calculator-button" onclick="appendToDisplay('2')">2</button>
+                <button class="calculator-button" onclick="appendToDisplay('3')">3</button>
+                <button class="calculator-button" onclick="appendToDisplay('+')">&plus;</button>
+            </div>
+            <!-- Row 5 -->
+            <div class="calculator-button-row">
+                <button class="calculator-button calculator-button-double" onclick="appendToDisplay('0')">0</button>
+                <button class="calculator-button" onclick="calculateResult()">&equals;</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

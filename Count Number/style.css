@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+body {
+  margin: 0;
+}
+
+h1{
+    text-align: center;
+    color: blue;
+
+}
+    
+ @property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+  }
+  
+  @keyframes spin {
+    to {
+      --bg-angle: 360deg;
+    }
+  } 
+  
+  
+   article { 
+    animation: spin 2.5s infinite linear paused;
+    background:
+      linear-gradient(
+          to bottom,
+          oklch(0.1 0.2 240 / 0.95),
+          oklch(0.1 0.2 240 / 0.95)
+        )
+        padding-box, 
+      conic-gradient(
+          from var(--bg-angle) in oklch longer hue,
+          oklch(0.85 0.37 0) 0 0
+        )
+        border-box; 
+    
+    
+    border: 6px solid transparent;
+  
+   
+    &:hover {
+      animation-play-state: running;
+    }
+  }
+  
+  main {
+    background: 
+      radial-gradient(
+          circle, 
+          oklch(0.15 0.2 330 / 0), 
+          oklch(0.15 0.2 330 / 1)
+        ),
+      linear-gradient(
+          344deg in oklch,
+          oklch(0.3 0.37 310),
+          oklch(0.35 0.37 330),
+          oklch(0.3 0.37 310)
+        );
+    display: flex;
+    justify-content: center;
+    height: 100svh;
+    place-items: center;
+  }
+  
+  article {
+    border-radius: 3rem;
+    box-shadow: 0.125rem 0.25rem 0.25rem 0.5rem oklch(0.1 0.37 315 / 0.25);
+    color: white;
+    padding: 1rem;
+    width: min(400px, 90vw);
+  
+    & h1 {
+      line-height: 1.1;
+      margin: 0;
+    }
+
+  }
+
+
+  #myInput{
+    margin: 10%;
+    text-align: center;
+    display: block;
+    font-weight: 800;
+    font-size: 5em;
+    color: cyan;
+ }
+#screen{
+    text-align: center;
+  margin-left: 35%; ;
+  margin-right: 35%;
+}
+
+#increase{
+    padding: 10px 20px;
+    border-radius:20px ;
+    background-color: blue;
+    color: darkturquoise;
+    margin-bottom: 20px;
+}
+#decrease{
+    padding: 10px 20px;
+    border-radius:20px ;
+    background-color: gold;
+    color: darkturquoise;
+    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+#reset{
+    padding: 10px 30px;
+    border-radius:20px ;
+    background-color: red;
+    color: darkturquoise;
+    margin-bottom: 20px;
+}
+
+#reset:hover{
+    color: darkred;
+}
+
+#decrease:hover{
+    color: darkgoldenrod;
+}
+#increase:hover{
+    color: darkblue;
+
+}
+
+
+
+
+
+
+   
+
+
+    /* 2nd Animation */ 
+ 
+   /* body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+  }
+  
+  #screen {
+    position: relative;
+    margin: 50px auto 0;
+    width: 600px;
+    height: 300px;
+    background: linear-gradient(0deg, #000, #272727);
+  }
+  
+  #screen:before, #screen:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .block:after {
+    filter: blur(50px);
+  }  */
+
+
+
+
