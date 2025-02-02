@@ -1,16 +1,16 @@
 function checkDay() {
 
-    let day = prompt("Enter Any Number Between 1 To 7")
+    let day: string = prompt("Enter Any Number Between 1 To 7") || "";
 
-        day = parseInt(day)
+       let dayNumber:number = Number(day);
 
-    switch (day) {
+    switch (dayNumber) {
         case 1:
             console.log("It's Monday");
                 break;
     
         case 2:
-            console.log("It's tuesday");zx
+            console.log("It's tuesday");
                 break;
     
         case 3:
@@ -43,7 +43,7 @@ function checkDay() {
 
 function CheckMonthDays() {
         
-    let inputMoth = prompt("Enter Month Or Month Number")
+    let inputMoth:any = prompt("Enter Month Or Month Number") || "";
 
     inputMoth = inputMoth.toLowerCase();
 
