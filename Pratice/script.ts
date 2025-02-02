@@ -154,3 +154,71 @@ function CheckMonthDays() {
 
 }
 }
+
+
+
+// Write A Function That Calculate The Bill Amount Based On Units And User Type
+// base Unit rate is 40rs
+// tax if unit is 0 to 200 , 1.5%
+// tax if unit is 200 to 500 , 5.5%
+// tax if unit is 500+ , 10.5%
+// if costumer is Wapda Employee give them 100 units free every month
+
+
+
+function billCalculator(){
+
+    let userUnits:string = prompt("Enter Your Units") || "";
+
+    let userInfo : string = prompt(`type "Y" For Wapda Employee And Type "N" For Not A Wapda Employee `) || "";
+
+    let billAmount:number = Number(userUnits)
+
+
+    if (userInfo.toLowerCase() === "y" && billAmount <= 100) {
+        console.log(`Your Bill Amount Is 0`);
+
+    }
+
+    else if (userInfo.toLowerCase() === "y" && billAmount >= 100 && billAmount < 200) {
+        let calculateBill:number = (billAmount - 100) * 40 /0.015;
+        console.log(`Your Bill Amount Is ${Math.ceil(calculateBill)}`);
+        
+    }
+        else if (userInfo.toLowerCase() === "y" && billAmount >= 200 && billAmount < 500) {
+        let calculateBill:number = (billAmount - 100) * 40 /0.055;
+        console.log(`Your Bill Amount Is ${Math.ceil(calculateBill)}`);
+        }
+
+              else if (userInfo.toLowerCase() === "y" && billAmount >= 500) {
+        let calculateBill:number = (billAmount - 100) * 40 /0.105;
+        console.log(`Your Bill Amount Is ${Math.ceil(calculateBill)}`);
+        }
+
+
+
+    else if (userInfo.toLowerCase() === "n" && billAmount >= 1 && billAmount < 200) {
+        let calculateBill:number = (billAmount * 40) / 0.015;
+        console.log(`Your Bill Amount Is ${Math.ceil(calculateBill)}`);
+    }
+
+
+
+    else if (userInfo.toLowerCase() === "n" && billAmount >= 200 && billAmount < 500) {
+        let calculateBill:number = (billAmount * 40) / 0.055;
+        console.log(`Your Bill Amount Is ${Math.ceil(calculateBill)}}`);
+    }
+
+
+    else if (userInfo.toLowerCase() === "n" && billAmount > 500) {
+        let calculateBill:number = (billAmount * 40) / 0.105;
+        console.log(`Your Bill Amount Is ${Math.ceil(calculateBill)}`);
+    }
+
+        else {
+            console.log("Invalid Input");
+            
+        }
+
+
+}billCalculator();
