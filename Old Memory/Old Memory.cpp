@@ -45,6 +45,9 @@ cin >> userInputNumber1;
         {
         cout << "****";
         }
+        else if (userInput == "Bitch" || userInput == "bitch" || userInput == "BITCH" ){
+            cout << "*****";
+        }
         else{
             cout << userInput;
         }
